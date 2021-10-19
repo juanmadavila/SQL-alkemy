@@ -11,4 +11,4 @@ SELECT * from persona;
 
 alter table persona add PRIMARY key (id);
 
-
+#Al agregar la clave primaria, los registros se han mostrado en un orden secuencial. 
