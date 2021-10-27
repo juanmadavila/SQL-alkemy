@@ -8,15 +8,15 @@ select e.legajo, count(i.numero) as 'cantidad de cursos que realiza' from estudi
 select * from estudiante where legajo not in (select ESTUDIANTE_legajo from inscripcion);
 
 /*
-Escriba para cada tabla, los index (incluyendo su tipo) que tiene cada una.
-TABLA       	INDICE            	 			TIPO 
-profesor 	-> 	PRIMARY KEY id(INT)  			clousterizado 
+#Escriba para cada tabla, los index (incluyendo su tipo) que tiene cada una.
+TABLA       	INDICE            	 		TIPO 
+profesor    ->  PRIMARY KEY id(INT)  		        clousterizado 
 				
-curso    	-> 	PRIMARY KEY codigo(INT) 		clousterizado
-				FOREIGN KEY PROFESOR_id(INT)
+curso       ->  PRIMARY KEY codigo(INT) 		clousterizado
+		FOREIGN KEY PROFESOR_id(INT)
                 
 inscripcion ->  PRIMARY KEY numero(INT)  		clousterizado
-				FOREIGN KEY CURSO_codigo(INT)
+		FOREIGN KEY CURSO_codigo(INT)
                 FOREIGN KEY ESTUDIANTE_legajo(INT)
                 
 estudiante  ->  PRIMARY KEY legajo(INT)  		clousterizado				
